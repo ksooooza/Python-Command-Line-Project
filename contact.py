@@ -1,7 +1,7 @@
 from peewee import *
 from playhouse.shortcuts import model_to_dict, dict_to_model
 
-db = PostgresqlDatabase('Contact-Book', user='johnrissmiller', password='12345', host='localhost', port=5432)
+db = PostgresqlDatabase('Contact-Book', user='johnrissmiller', password='12345')
 
 class BaseModel(Model):
     class Meta:
@@ -13,7 +13,6 @@ class Contacts(BaseModel):
     phone_number = IntegerField()
     email = CharField()
     company = CharField()
-    birthday = DateField()
 
 db.connect()
 
@@ -22,7 +21,7 @@ def contact_list():
 
     if answer == "v":
         contact = contacts.select()
-        print([(contacts.name, contacts.address, contacts.phone_number, contacts.email, contacts.company, contacts.birthday) for contacts in contact])
+        print([(contacts.name, contacts.address, contacts.phone_number, contacts.email, contacts.company) for contacts in contact])
 
     if answer == "a":
         name = input("Enter contact name: ")
@@ -30,7 +29,6 @@ def contact_list():
         phone_number = input("Enter contact phone number: ")
         email = input("Enter contact email: ")
         company = input("Enter contact company: ")
-        birthday = input("Enter contact birthday: ")
         contact.save()
         print(f'Your new contact, {name}, has been saved!')
 
