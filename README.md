@@ -1,6 +1,6 @@
 # Python-Command-Line-Project
 
-This project is an API built using Python and SQL. You can view all contacts and add a new contact all from the CLI!
+This project is an API built using Python and SQL. You can view all contacts, add a new contact, and get a contact by name all from the CLI!
 
 ---
 
@@ -25,6 +25,8 @@ Example of adding new contact:
 Example of viewing all contacts:
 ![View all contacts](https://imgur.com/t33TkcI.png)
 <br />
+Example of getting a contact by name:
+![Get contact by name](https://imgur.com/gEFcTz7.png)
 
 
 ---
