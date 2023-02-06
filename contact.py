@@ -32,7 +32,7 @@ def contact_list():
         phone_number = input("Enter contact phone number: ")
         email = input("Enter contact email: ")
         company = input("Enter contact company: ")
-        birthday = input("Enter contact birthday (YYYY, MM, DD): ")
+        birthday = input("Enter contact birthday (Month, DD, YYYY): ")
         contact = Contacts(name=name, address=address, phone_number=phone_number, email=email, company=company, birthday=birthday)
         contact.save()
         print(f'Your new contact, {name}, has been saved!')

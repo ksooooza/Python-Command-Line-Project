@@ -6,5 +6,6 @@ CREATE TABLE contacts (
     address VARCHAR(255),
     phone_number INTEGER,
     email VARCHAR(255),
-    company VARCHAR(255)
+    company VARCHAR(255),
+    birthday VARCHAR(255)
 );
