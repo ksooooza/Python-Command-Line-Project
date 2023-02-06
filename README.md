@@ -20,10 +20,10 @@ class Contacts(BaseModel):
 ###
 Example of adding new contact:
 <br />
-[Add new contact](https://imgur.com/FPNsRU1)
+![Add new contact](https://imgur.com/FPNsRU1)
 <br />
 Example of viewing all contacts:
-[View all contacts](https://imgur.com/t33TkcI)
+![View all contacts](https://imgur.com/t33TkcI)
 <br />
 
 
