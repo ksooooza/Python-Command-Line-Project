@@ -20,7 +20,7 @@ date = datetime.date
 db.connect()
 
 def contact_list():
-    answer = input("Hello, welcome to your address book. Would you like to view your contacts(V), add a contact(A), or find a contact by name(F)? ").lower()
+    answer = input("Hello, welcome to your address book. Would you like to view your contacts(V), add a contact(A), find a contact by name(F), or delete a contact(D)? ").lower()
 
     if answer == "v":
         contact = Contacts.select()
@@ -41,5 +41,11 @@ def contact_list():
         name = input("What is the contact's first and last name? ")
         contact = Contacts.get(Contacts.name == name)
         print(f'Name: {contact.name}, Address: {contact.address}, phone_number: {contact.phone_number}, Email: {contact.email}, Company: {contact.company}, Birthday: {contact.birthday}')
+
+    if answer == "d":
+        name = input("What is the name of the contact you would like to delete? ")
+        contact = Contacts.get(Contacts.name == name)
+        delete_contact = Contacts.delete_instance(contact)
+        print("Contact deleted. ")
 
 contact_list()
